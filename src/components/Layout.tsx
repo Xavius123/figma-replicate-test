@@ -34,10 +34,10 @@ const Layout: React.FC = () => {
                     <Link
                       to='/'
                       className={cn(
-                        'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none',
+                        'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:bg-surface-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
                         isActive('/')
                           ? 'bg-primary text-primary-foreground shadow-sm'
-                          : 'text-muted-foreground hover:text-foreground'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-surface-hover'
                       )}
                     >
                       Home
@@ -50,10 +50,10 @@ const Layout: React.FC = () => {
                     <Link
                       to='/quali'
                       className={cn(
-                        'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none',
+                        'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:bg-surface-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
                         isActive('/quali')
                           ? 'bg-primary text-primary-foreground shadow-sm'
-                          : 'text-muted-foreground hover:text-foreground'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-surface-hover'
                       )}
                     >
                       Quali Design System
