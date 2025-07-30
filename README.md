@@ -20,70 +20,91 @@ A modern React TypeScript project with Tailwind CSS and comprehensive CSS variab
 - Vite
 - PostCSS
 - Autoprefixer
+- ESLint
+- Prettier
 
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd figma-replicate-test
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
 
 4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+## 🔧 Development Setup
+
+### Code Quality Tools
+
+The project includes ESLint and Prettier for code quality and formatting:
+
+- **ESLint**: Lints TypeScript and React code with automatic unused import removal
+- **Prettier**: Formats code consistently
+- **Auto-fix on save**: Configured in VS Code settings
+
+### VS Code Extensions
+
+Install the recommended extensions for the best development experience:
+
+- Prettier - Code formatter
+- ESLint
+- Tailwind CSS IntelliSense
+- TypeScript Importer
+
+### Automatic Formatting
+
+The project is configured to automatically:
+- Format code on save using Prettier
+- Remove unused imports on save
+- Fix ESLint errors on save
+
 ## 🎨 CSS Variables
 
 The project uses CSS custom properties for consistent theming:
 
 ### Colors
+
 ```css
---color-primary: #3b82f6
---color-secondary: #64748b
---color-accent: #f59e0b
---color-background: #ffffff
---color-surface: #f8fafc
---color-text: #1e293b
---color-text-secondary: #64748b
---color-border: #e2e8f0
---color-error: #ef4444
---color-success: #22c55e
---color-warning: #f59e0b
+--color-primary: #3b82f6 --color-secondary: #64748b --color-accent: #f59e0b
+  --color-background: #ffffff --color-surface: #f8fafc --color-text: #1e293b
+  --color-text-secondary: #64748b --color-border: #e2e8f0 --color-error: #ef4444
+  --color-success: #22c55e --color-warning: #f59e0b;
 ```
 
 ### Spacing
+
 ```css
---spacing-xs: 0.25rem
---spacing-sm: 0.5rem
---spacing-md: 1rem
---spacing-lg: 1.5rem
---spacing-xl: 2rem
---spacing-2xl: 3rem
+--spacing-xs: 0.25rem --spacing-sm: 0.5rem --spacing-md: 1rem
+  --spacing-lg: 1.5rem --spacing-xl: 2rem --spacing-2xl: 3rem;
 ```
 
 ### Border Radius
+
 ```css
---border-radius-sm: 0.25rem
---border-radius-md: 0.375rem
---border-radius-lg: 0.5rem
---border-radius-xl: 0.75rem
+--border-radius-sm: 0.25rem --border-radius-md: 0.375rem
+  --border-radius-lg: 0.5rem --border-radius-xl: 0.75rem;
 ```
 
 ### Shadows
+
 ```css
---shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05)
---shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1)
---shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1)
---shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1)
+--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05) --shadow-md: 0 4px 6px -1px
+  rgb(0 0 0 / 0.1) --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1) --shadow-xl: 0
+  20px 25px -5px rgb(0 0 0 / 0.1);
 ```
 
 ## 🧩 Component Classes
@@ -91,6 +112,7 @@ The project uses CSS custom properties for consistent theming:
 The project includes pre-built component classes:
 
 ### Buttons
+
 ```html
 <button class="btn btn-primary btn-md">Primary Button</button>
 <button class="btn btn-secondary btn-sm">Secondary Button</button>
@@ -100,6 +122,7 @@ The project includes pre-built component classes:
 ```
 
 ### Cards
+
 ```html
 <div class="card">
   <div class="card-header">
@@ -116,6 +139,7 @@ The project includes pre-built component classes:
 ```
 
 ### Form Elements
+
 ```html
 <input class="input" type="text" placeholder="Enter text" />
 <label class="label">Form Label</label>
@@ -128,6 +152,7 @@ The project automatically supports dark mode using CSS media queries. The CSS va
 ## 📱 Responsive Design
 
 The project uses Tailwind's responsive prefixes for mobile-first design:
+
 - `sm:` - Small screens (640px+)
 - `md:` - Medium screens (768px+)
 - `lg:` - Large screens (1024px+)
@@ -139,6 +164,9 @@ The project uses Tailwind's responsive prefixes for mobile-first design:
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+- `npm run lint:fix` - Run ESLint with auto-fix
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
 
 ## 📁 Project Structure
 
@@ -158,18 +186,20 @@ figma-replicate-test/
 ## 🎯 Usage Examples
 
 ### Using CSS Variables in Components
+
 ```tsx
 function MyComponent() {
   return (
-    <div className="bg-background text-text p-md rounded-md">
-      <h2 className="text-primary font-bold">Title</h2>
-      <p className="text-text-secondary">Description</p>
+    <div className='bg-background text-text p-md rounded-md'>
+      <h2 className='text-primary font-bold'>Title</h2>
+      <p className='text-text-secondary'>Description</p>
     </div>
-  )
+  );
 }
 ```
 
 ### Custom Styling with CSS Variables
+
 ```css
 .my-custom-component {
   background-color: var(--color-surface);

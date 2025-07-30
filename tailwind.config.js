@@ -1,10 +1,6 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -141,7 +137,7 @@ module.exports = {
           800: '#1e293b',
           900: '#0f172a',
         },
-        
+
         // CSS Variables for colors (for your existing components)
         primary: 'var(--color-primary)',
         'primary-hover': 'var(--color-primary-hover)',
@@ -181,24 +177,24 @@ module.exports = {
       },
       spacing: {
         // CSS Variables for spacing
-        'xs': 'var(--spacing-xs)',
-        'sm': 'var(--spacing-sm)',
-        'md': 'var(--spacing-md)',
-        'lg': 'var(--spacing-lg)',
-        'xl': 'var(--spacing-xl)',
+        xs: 'var(--spacing-xs)',
+        sm: 'var(--spacing-sm)',
+        md: 'var(--spacing-md)',
+        lg: 'var(--spacing-lg)',
+        xl: 'var(--spacing-xl)',
         '2xl': 'var(--spacing-2xl)',
       },
       borderRadius: {
-        'sm': 'var(--border-radius-sm)',
-        'md': 'var(--border-radius-md)',
-        'lg': 'var(--border-radius-lg)',
-        'xl': 'var(--border-radius-xl)',
+        sm: 'var(--border-radius-sm)',
+        md: 'var(--border-radius-md)',
+        lg: 'var(--border-radius-lg)',
+        xl: 'var(--border-radius-xl)',
       },
       boxShadow: {
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-        'xl': 'var(--shadow-xl)',
+        sm: 'var(--shadow-sm)',
+        md: 'var(--shadow-md)',
+        lg: 'var(--shadow-lg)',
+        xl: 'var(--shadow-xl)',
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
@@ -206,4 +202,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+};
